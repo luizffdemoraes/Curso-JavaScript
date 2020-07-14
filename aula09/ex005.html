@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros Passos com DOM</title>
+  <style>
+    body {
+      background: rgb(89, 39, 226);
+      color: white;
+      font: normal 18pt Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Iniciando estudos DOM</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+  <div id="msg">Clique em mim</div>
+  <div class='txt'>Paçoca & Milka</div>
+  <div id='msn'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id laborum dolore totam iure ipsam similique culpa dolores incidunt, tenetur fugiat consectetur dignissimos deleniti nobis rerum dicta. Hic dolorum labore debitis!</div>
+  <script>
+    var corpo = window.document.body //Atribui a variavel corpo o a tela de fundo
+    var p1 = window.document.getElementsByTagName('p')[1] //Seleciona o primeiro paragrafo [0] seleciona o segundo [1]
+    p1.style.color = 'darkblue'
+
+    var d = window.document.querySelector('#msg')
+    d.style.background = 'brown'
+
+    window.document.write('Olá Mundo ')
+
+    var p3 = window.document.querySelector('.txt')
+    p3.style.background = 'black'
+
+    window.document.write(p1.innerHTML)
+
+    var d1 = window.document.getElementById('msn')
+
+    d1.style.background = 'pink'
+    //d1.innerText = 'Estou aguardando...'
+    window.document.getElementById('msg').innerText = 'Débora Cruz Ferreira'
+
+    //window.alert(p1.innerHTML)
+
+    //var d = window.document.getElementsByName('msg')[0]
+    //d.innerText = 'Olá!'
+    /*
+    var p2 = window.document.getElementsByClassName('msg')[0]
+    p2.style.color = 'black'
+    p2.style.background = 'white'
+    */
+    /*
+    var d = window.document.getElementById('msg')
+    d.style.background = 'green'
+    window.document.getElementById('msg').innerText = "Olá"
+    //d.innerText = "Estou aguardando..."
+    */
+
+    //window.alert(p1.innerText)
+    //document.write(p1.innerHTML);
+    //corpo.style.background = 'black' //Altera cor de fundo
+    //window.document.write('Está escrito assim: ' + p1.innerText)// Exibe a informação da variavel e concatena.
+    //p1.style.color = "darkblue"
+
+
+  </script>
+</body>
+
+</html>
